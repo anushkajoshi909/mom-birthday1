@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday Mom ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <div class="brand">For Mom 💖</div>
+      <div class="mini">17 Feb • Born 1977</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Happy Birthday, Mom ❤️</h1>
+        <p class="sub">I’m far away, but my love isn’t.</p>
+
+        <div class="countdown" aria-label="Birthday countdown">
+          <div class="cd"><div class="num" id="cdDays">—</div><div class="lbl">Days</div></div>
+          <div class="cd"><div class="num" id="cdHours">—</div><div class="lbl">Hours</div></div>
+          <div class="cd"><div class="num" id="cdMins">—</div><div class="lbl">Minutes</div></div>
+          <div class="cd"><div class="num" id="cdSecs">—</div><div class="lbl">Seconds</div></div>
+        </div>
+
+        <p class="age" id="ageLine">You’re turning <strong>—</strong> this year… older, but still <span class="pretty">so pretty</span> ✨</p>
+
+        <div class="actions">
+          <button class="btn primary" id="playBtn">▶ Play our video</button>
+          <a class="btn" href="#letter">Read my letter</a>
+        </div>
+
+        <p class="hint">Tip: Add your song as <code>assets/song.mp3</code> (see README) so it plays when you press Play.</p>
+      </div>
+
+      <div class="hero-photo">
+        <img src="assets/images/photo_01.jpg" alt="Mom photo" />
+      </div>
+    </section>
+
+    <section id="slideshow" class="section" aria-label="Photo slideshow">
+      <div class="section-head">
+        <h2>Our memories (video)</h2>
+        <p>Tap the play button on the video to start the music and the slideshow.</p>
+      </div>
+
+      <div class="frame">
+        <button class="videoPlayOverlay" id="videoOverlayBtn" aria-label="Play video">▶</button>
+      <img id="slide" src="assets/images/photo_01.jpg" alt="Slideshow photo" />
+      </div>
+
+      <div class="controls">
+        <button class="btn small" id="pauseBtn">⏸ Pause</button>
+        <button class="btn small" id="resumeBtn">▶ Resume</button>
+        <button class="btn small" id="magicBtn">✨ Birthday magic</button>
+      </div>
+    </section>
+
+    <section id="letter" class="section">
+      <div class="section-head">
+        <h2>My letter to you</h2>
+        <p>Everything I wish I could say in person right now.</p>
+      </div>
+
+      <article class="letter">
+
+        <p>Happy <strong>49th</strong> birthday to you. Mom, I love you so much.</p>
+        <p>You’re the best person ever.</p>
+        <p>I love every minute I spend with you, and there is no one I love more than you.</p>
+        <p>Shopping with you is my favorite thing because we basically have the same taste. I hope soon I can buy you everything you want.</p>
+        <p>You work so hard, and you’ve gone through so much… but you still stand strong. That strength inspires me every day.</p>
+        <p class="emphasis">And Mom — everything will be alright soon. I promise.</p>
+        <p>You’re kind-hearted, you’re beautiful, and you deserve the happiest birthday ever.</p>
+        <p class="sign">Love always,<br><span class="sig">Saloni 💖</span></p>
+
+      </article>
+    </section>
+
+    <section id="game" class="section">
+      <div class="section-head">
+        <h2>Okay mom… important question 😌</h2>
+        <p>Only one correct answer.</p>
+      </div>
+
+      <div class="game">
+        <img class="gameimg" src="assets/images/photo_13.jpeg" alt="Family photo" />
+        <p class="q">Who do you love the most?</p>
+
+        <div class="btns">
+          <button class="btn primary" id="meBtn">ME 😇</button>
+          <button class="btn run" id="itiBtn">ITI</button>
+          <button class="btn run" id="bhaiyuBtn">Bhaiyu</button>
+        </div>
+
+        <div id="win" class="win hidden">
+          <h3>I knew it 😌❤️</h3>
+          <p>I love you the most too.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      Made with love for Mom 💖
+    </footer>
+
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <audio id="music" preload="auto" loop></audio>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
