@@ -4,7 +4,7 @@ const BIRTH_DAY = 17;  // 17th
 const BIRTH_YEAR = 1977;
 
 // ===== Slideshow settings =====
-const PICS = ['photo_01.jpg', 'photo_02.jpg', 'photo_03.jpg', 'photo_04.jpg', 'photo_05.jpg', 'photo_06.jpeg', 'photo_07.jpeg', 'photo_08.jpeg', 'photo_09.jpeg', 'photo_10.jpeg', 'photo_11.jpeg', 'photo_12.jpg', 'photo_13.jpeg'];
+const PICS = ["photo_01.jpg", "photo_014.jpg", "photo_015.jpg", "photo_016.jpg", "photo_017.jpg", "photo_018.jpg", "photo_019.jpg", "photo_02.jpg", "photo_03.jpg", "photo_04.jpg", "photo_05.jpg", "photo_06.jpeg", "photo_07.jpeg", "photo_08.jpeg", "photo_09.jpeg", "photo_10.jpeg", "photo_11.jpeg", "photo_12.jpg", "photo_13.jpeg"];
 const SLIDE_MS = 2200;
 
 // ===== Helpers =====
@@ -214,3 +214,32 @@ function tick() {
 }
 
 $("magicBtn")?.addEventListener("click", startConfetti);
+
+
+// ===== Start celebration on open (confetti + hearts) =====
+function spawnHeart() {
+  const wrap = document.querySelector(".hearts");
+  if (!wrap) return;
+
+  const el = document.createElement("div");
+  el.className = "heart";
+  el.textContent = Math.random() < 0.5 ? "💖" : "✨";
+  el.style.left = (Math.random() * 100) + "vw";
+  el.style.fontSize = (14 + Math.random() * 18) + "px";
+  el.style.animationDuration = (4 + Math.random() * 3) + "s";
+  wrap.appendChild(el);
+
+  setTimeout(() => el.remove(), 8500);
+}
+
+window.addEventListener("load", () => {
+  // Confetti immediately when she opens the link
+  startConfetti();
+
+  // A small burst of hearts immediately
+  for (let i = 0; i < 14; i++) setTimeout(spawnHeart, i * 180);
+
+  // Then keep it subtle
+  setInterval(spawnHeart, 550);
+
+});
